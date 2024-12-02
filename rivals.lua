@@ -5,7 +5,7 @@ local ESPLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ex
 -- Load UI Library
 local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua"))()
 local Window = Rayfield:CreateWindow({
-    Name = "My Script",
+    Name = "Rivals",
     LoadingTitle = "Loading Interface",
     LoadingSubtitle = "Powered by Rayfield",
 })
