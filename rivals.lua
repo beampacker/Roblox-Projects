@@ -318,7 +318,7 @@ VisualsTab:CreateButton({
     end,
 })
 
--- Silent Aim FOV Toggle (Max 200)
+-- Silent Aim FOV Toggle (Max 400)
 VisualsTab:CreateToggle({
     Name = "Enable Silent Aim FOV",
     CurrentValue = false,
@@ -333,8 +333,8 @@ local fovCircle
 game:GetService("RunService").RenderStepped:Connect(function()
     local camera = workspace.CurrentCamera
     local screenCenter = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
-    local fovRadius = _G.SilentAimEnabled and 200 or 0 -- Max FOV 200 if enabled
-    
+    local fovRadius = _G.SilentAimEnabled and math.min(400, _G.FOVRadius or 400) or 0 -- Max FOV 400 if enabled
+
     -- Create or update the circle based on visibility
     if _G.SilentAimEnabled then
         if not fovCircle then
