@@ -47,36 +47,6 @@ local Framework = {}; Framework.__index = Framework; do
     end
 end
 
--- Main
-if not isfolder("ESP") then makefolder("ESP") end
-if not isfolder("ESP/assets") then makefolder("ESP/assets") end
-if not isfile("ESP/assets/taxi.oh") then
-    writefile("ESP/assets/taxi.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/taxi.png"))
-end
-if not isfile("ESP/assets/gorilla.oh") then
-    writefile("ESP/assets/gorilla.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/gorilla.png"))
-end
-if not isfile("ESP/assets/saul_goodman.oh") then
-    writefile("ESP/assets/saul_goodman.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/saul_goodman.png"))
-end
-if not isfile("ESP/assets/peter_griffin.oh") then
-    writefile("ESP/assets/peter_griffin.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/peter_griffin.png"))
-end
-if not isfile("ESP/assets/john_herbert.oh") then
-    writefile("ESP/assets/john_herbert.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/john_herbert.png"))
-end
-if not isfile("ESP/assets/fortnite.oh") then
-    writefile("ESP/assets/fortnite.oh", game:HttpGet("https://www.octohook.xyz/ionhub/esp_assets/fortnite.png"))
-end
-local Images = {
-    Taxi = readfile("ESP/assets/taxi.oh"),
-    Gorilla = readfile("ESP/assets/gorilla.oh"),
-    ["Saul Goodman"] = readfile("ESP/assets/saul_goodman.oh"),
-    ["Peter Griffin"] = readfile("ESP/assets/peter_griffin.oh"),
-    ["John Herbert"] = readfile("ESP/assets/john_herbert.oh"),
-    ["Fortnite"] = readfile("ESP/assets/fortnite.oh")
-}
-
 local ESP; ESP = {
     Settings = {
         Enabled = false,
