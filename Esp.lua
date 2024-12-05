@@ -65,7 +65,6 @@ local ESP; ESP = {
         Tool = {Enabled = false, Position = "Right", Color = Color3.new(1, 1, 1), Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
         Health = {Enabled = false, Position = "Right", Transparency = 0, OutlineColor = Color3.new(0, 0, 0)},
         Chams = {Enabled = false, Color = Color3.new(1, 1, 1), Mode = "Visible", OutlineColor = Color3.new(0, 0, 0), Transparency = 0.5, OutlineTransparency = 0},
-        Image = {Enabled = false, Image = "Taxi", Raw = Images.Taxi},
         China_Hat = {Enabled = false, Color = Color3.new(1, 1, 1), Transparency = 0.5, Height = 0.5, Radius = 1, Offset = 1}
     },
     Objects = {},
@@ -209,7 +208,6 @@ do -- Player Metatable
         local Tool, ToolBold = self.Components.Tool, self.Components.ToolBold
         local Health, HealthBold = self.Components.Health, self.Components.HealthBold
         local Chams = _G.chamsEnabled == true and self.Components.Chams or true
-        local Image = self.Components.Image
         if Box == nil or Box_Outline == nil or Healthbar == nil or Healthbar_Outline == nil or Name == nil or NameBold == nil or Distance == nil or DistanceBold == nil or Tool == nil or ToolBold == nil or Health == nil or HealthBold == nil or Chams == nil then
             self:Destroy()
         end
@@ -232,7 +230,6 @@ do -- Player Metatable
                 if _G.chamsEnabled == true then
                     Chams.Enabled = false
                 end
-                Image.Visible = false
                 return
             end
             local Current_Health, Health_Maximum = ESP:Get_Health(self.Player), Humanoid.MaxHealth
@@ -299,14 +296,6 @@ do -- Player Metatable
                     Box_Outline.Thickness = Box_Outline_Settings.Outline_Size + 2
                     Box_Outline.Transparency = Framework:Drawing_Transparency(Box_Outline_Settings.Transparency)
                     Box_Outline.Visible = Box_Settings.Enabled and Box_Outline_Settings.Enabled or false
-
-                    local Image_Settings = ESP.Settings.Image
-                    local Image_Enabled = Image_Settings.Enabled
-                    if Image_Enabled then
-                        Image.Size = -Box_Size
-                        Image.Position = Box_Position + Box_Size
-                    end
-                    Image.Visible = Image_Enabled
 
                     -- Healthbar
                     local Health_Top_Size_Outline = Vector2.new(Box_Size.X - 4, 3)
@@ -527,7 +516,6 @@ do -- Player Metatable
                     if _G.chamsEnabled == true then
                         Chams.Enabled = false
                     end
-                    Image.Visible = false
                     return
                 end
             else
@@ -546,7 +534,6 @@ do -- Player Metatable
                 if _G.chamsEnabled == true then
                     Chams.Enabled = false
                 end
-                Image.Visible = false
                 return
             end
         else
@@ -565,7 +552,6 @@ do -- Player Metatable
             if _G.chamsEnabled == true then
                 Chams.Enabled = false
             end
-            Image.Visible = false
             return
         end
     end
