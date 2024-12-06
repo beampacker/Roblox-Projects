@@ -6,7 +6,7 @@ local Workspace = game:GetService("Workspace")
 local Lighting = game:GetService("Lighting")
 
 if game.PlaceId == 2916899287 then
-    Ray.Utilities.UI:Push({Title = "Ray Hub", Description = "Please join the game"})
+    Ray.Utilities.UI:Push({Title = "Ray Domain", Description = "Please join the game"})
     return
 end
 
@@ -56,7 +56,7 @@ local KnownBodyParts = {
 }
 
 local Window = Ray.Utilities.UI:Window({
-    Name = ("Ray Hub %s %s"):format(utf8.char(8212), Ray.Game.Name),
+    Name = ("Ray  %s %s"):format(utf8.char(8212), Ray.Game.Name),
     Position = UDim2.new(0.5, -248 * 3, 0.5, -248)
 }) do
 
@@ -298,7 +298,7 @@ local Window = Ray.Utilities.UI:Window({
                 EnableSwitch("fuel_l_r")
 
                 Ray.Utilities.UI:Push({
-                    Title = "Ray Hub",
+                    Title = "Ray ",
                     Description = "Please wait till your engines start up, you dont need to touch anything",
                     Duration = 30
                 })
