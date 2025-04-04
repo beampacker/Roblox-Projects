@@ -1,3 +1,18 @@
+--  Esp is broken rn, fix later.                                                          
+--Quick shoot possibly patched maybe the way I call it is patched, finding a workaround                5/4/25
+--Silent aim, No recoil and No spread is all working.
+
+-- Roadmap
+--    Fix projectilespeed,                                                                                                                                                        
+--    Fix esp
+--    add skin changer
+--    wallbang
+--    killaura (testing the possibility using bow projectile and modifying how many is shot at one combined with wallbang == OP)
+--    New Ui
+--    ui stays on teleport
+--    No aimbot for now (im to lazy)
+
+
 -- Load Exunys ESP module
 local ESPLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Exunys-ESP/main/src/ESP.lua"))()
 -- ESPLibrary and getgenv().ExunysDeveloperESP is equivalent.
