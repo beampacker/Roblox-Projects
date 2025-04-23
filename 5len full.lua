@@ -54,7 +54,7 @@ do -- before loading
     end)
     --
     loadstring(
-            game:HttpGetAsync(
+            game:HttpGet(
                     "https://raw.githubusercontent.com/beampacker/Roblox-Projects/refs/heads/main/bypass%20for%205len%20full.lua",
                     true
             )
